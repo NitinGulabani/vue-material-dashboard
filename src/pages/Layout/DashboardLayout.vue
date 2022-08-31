@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-    <notifications></notifications>
+    <notifications group="foo"></notifications>
 
     <side-bar
       :sidebar-item-color="sidebarBackground"
@@ -15,9 +15,9 @@
         <md-icon>person</md-icon>
         <p>User Profile</p>
       </sidebar-link>
-      <sidebar-link to="/table">
+      <sidebar-link to="/menulist">
         <md-icon>content_paste</md-icon>
-        <p>Table list</p>
+        <p>Menu List</p>
       </sidebar-link>
       <sidebar-link to="/typography">
         <md-icon>library_books</md-icon>

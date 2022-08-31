@@ -8,17 +8,22 @@ import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Notifications from "@/pages/Notifications.vue";
 import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
+import AddMainMenu from "@/pages/AddEditMenu/AddMainMenu.vue";
+import AddSubMenu from "@/pages/AddEditMenu/AddSubMenu.vue";
+import AddChildSubMenu from "@/pages/AddEditMenu/AddChildSubMenu.vue";
 
 const routes = [
   {
     path: "/",
     component: DashboardLayout,
     redirect: "/dashboard",
+
     children: [
       {
         path: "dashboard",
         name: "Dashboard",
         component: Dashboard,
+        meta: { title: "Welcome" },
       },
       {
         path: "user",
@@ -26,9 +31,39 @@ const routes = [
         component: UserProfile,
       },
       {
-        path: "table",
-        name: "Table List",
+        path: "menulist",
+        name: "Menu List",
         component: TableList,
+      },
+      {
+        path: "addmainmenu",
+        name: "Add Main Menu",
+        component: AddMainMenu,
+      },
+      {
+        path: "addmainmenu/:id",
+        name: "Add Main Menu",
+        component: AddMainMenu,
+      },
+      {
+        path: "addsubmenu",
+        name: "Add Sub Menu",
+        component: AddSubMenu,
+      },
+      {
+        path: "addsubmenu/:id",
+        name: "Add Sub Menu",
+        component: AddSubMenu,
+      },
+      {
+        path: "addchildsubmenu",
+        name: "Add Child Sub Menu",
+        component: AddChildSubMenu,
+      },
+      {
+        path: "addchildsubmenu/:id",
+        name: "Add Child Sub Menu",
+        component: AddChildSubMenu,
       },
       {
         path: "typography",

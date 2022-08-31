@@ -29,7 +29,7 @@ export default {
           id: 1,
           name: "Dakota Rice",
           salary: "$36,738",
-          country: "Niger",
+          country: "Niger1",
           city: "Oud-Turnhout",
         },
         {
